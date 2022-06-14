@@ -44,6 +44,15 @@ def foo():
             filedata = filedata.replace(particular_line, new_line + '\n')
         with open('android/app/src/main/res/values/strings.xml', 'w') as file:
             file.write(filedata)
+        my_str1 = '<string>' 
+        my_strr1= '</string>' 
+        new_line1 =f'{my_str1} {password} {my_strr1}'    
+        particular_line1 = linecache.getline('ios/Runner/info.plist', 8)
+        with open('ios/Runner/info.plist', 'r') as file :
+            filedata = file.read()
+            filedata = filedata.replace(particular_line1, new_line1 + '\n')
+        with open('ios/Runner/info.plist', 'w') as file:
+            file.write(filedata)    
         #with open("var.json") as jsonFile:
         #    jsonObject = json.load(jsonFile)
         #    jsonFile.close()
