@@ -46,19 +46,13 @@ def foo():
             file.write(filedata)
         my_str1 = '    <string>' 
         my_strr1= '</string>' 
-        new_line1 =f'{my_str1} {password} {my_strr1}'    
-        particular_line1 = linecache.getline('ios/Runner/info.plist', 8)
+        new_line1 =f'{my_str1}{password}{my_strr1}'    
+        particular_line1 = linecache.getline('ios/Runner/info.plist', 14)
         with open('ios/Runner/info.plist', 'r') as file :
             filedata = file.read()
             filedata = filedata.replace(particular_line1, new_line1 + '\n')
         with open('ios/Runner/info.plist', 'w') as file:
             file.write(filedata)
-        particular_line2 = linecache.getline('ios/Runner/info.plist', 16)
-        with open('ios/Runner/info.plist', 'r') as file :
-            filedata = file.read()
-            filedata = filedata.replace(particular_line2, new_line1 + '\n')
-        with open('ios/Runner/info.plist', 'w') as file:
-            file.write(filedata)    
         #with open("var.json") as jsonFile:
         #    jsonObject = json.load(jsonFile)
         #    jsonFile.close()
@@ -75,8 +69,8 @@ def foo():
         urllib.request.urlretrieve(pic_url, "C:\\Users\\soukaina\\Desktop\\Myflaskproject\\testflask\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png")  
         urllib.request.urlretrieve(pic_url, "C:\\Users\\soukaina\\Desktop\\Myflaskproject\\testflask\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png")  
         urllib.request.urlretrieve(pic_url, "C:\\Users\\soukaina\\Desktop\\Myflaskproject\\testflask\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png")             
-        time.sleep(20)       
-        os.system("flutter run")       
+        #time.sleep(20)       
+        #os.system("flutter run")       
     return "hello world"
     # run flutter to generate ios and apk using run methodshgh process to run flutter app from python flutter build apk / flutter build ios. I can do it
     # zip ios and apkdfgsfgfrsrfghwskjdc nkjdnk:gfhfg
