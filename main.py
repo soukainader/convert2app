@@ -52,7 +52,7 @@ def foo():
             filedata = file.read()
             filedata = filedata.replace(particular_line1, new_line1 + '\n')
         with open('ios/Runner/info.plist', 'w') as file:
-            file.write(filedata)    
+            file.write(filedata)
         #with open("var.json") as jsonFile:
         #    jsonObject = json.load(jsonFile)
         #    jsonFile.close()
